@@ -26,4 +26,6 @@ jobs:
           cache: 'maven'
 
       - name: Run tests
-        run: ./mvnw test -B --no-transfer-progress
+        run: |
+          chmod +x mvnw
+          ./mvnw test -B --no-transfer-progress
