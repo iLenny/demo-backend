@@ -1,17 +1,24 @@
-name: Run Tests
+name: Unit Tests
 
 on:
   push:
-    branches: [ main, develop, 'release/**', 'feature/**' ]
+    branches:
+      - main
+      - develop
+      - 'release/**'
+      - 'feature/**'
   pull_request:
-    branches: [ main, develop, 'release/**' ]
+    branches:
+      - main
+      - develop
+      - 'release/**'
   workflow_call:
 
 permissions:
   contents: read
 
 jobs:
-  test:
+  unit-tests:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
