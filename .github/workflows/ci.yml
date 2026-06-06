@@ -33,7 +33,7 @@ jobs:
       - name: Run tests
         run: |
           chmod +x mvnw
-          ./mvnw test -B --no-transfer-progress
+          ./mvnw clean verify -B --no-transfer-progress
 
   push-image:
     runs-on: ubuntu-latest
